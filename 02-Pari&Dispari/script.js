@@ -23,12 +23,16 @@ console.log(userChoiceNumber);
 
 //Generiamo un numero random da 1 a 5 per il computer con una funzione
 
+const numberPc = generateRandomNumber(1, 5);
+
 function generateRandomNumber(min, max) {
   const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
   return randomNumber;
 }
 
 // Sommiamo il numero inserito dall'utente ed il numero random
+
+const sumNumber = userChoiceNumber + numberPc;
 
 //Stabilire se la somma è pari o dispari
 
