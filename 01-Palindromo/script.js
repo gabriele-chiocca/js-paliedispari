@@ -15,8 +15,7 @@ const palindroma = verifiedPalindroma(userChoice, reversed);
 
 //Risultato
 
-console.log(palindroma ? "E' palindroma" : "Non è palindroma");
-
+console.log(palindroma ? "E' palindroma" : 'Non è palindroma');
 
 //Funzione inverti parola
 function reverseWord(text) {
@@ -30,8 +29,7 @@ function reverseWord(text) {
   return wordReversed;
 }
 
-function verifiedPalindroma(userChoice, wordReversed) {
- 
-  let   
-  return isPalindroma;
+//Funzione di verifica
+function verifiedPalindroma(original, reversed) {
+  return original === reversed;
 }
