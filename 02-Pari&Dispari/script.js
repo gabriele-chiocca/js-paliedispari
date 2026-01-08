@@ -14,16 +14,19 @@ Dichiariamo chi ha vinto.
 const userChoiceParioDispari = prompt('Scegli Pari o Dispari').trim();
 console.log(userChoiceParioDispari);
 
+//Salviamo la scelta dell'utente e rendiamola un valore booleano
+
+const userIsPari = userChoiceParioDispari.toLowerCase() === 'pari';
+
 //L'utente inserisce un numero da 1 a 5
 
-const userChoiceNumber = parseInt(
-  prompt('Inserisci un numero da 1 a 5')
-).trim();
+const userChoiceNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
 console.log(userChoiceNumber);
 
 //Generiamo un numero random da 1 a 5 per il computer con una funzione
 
 const numberPc = generateRandomNumber(1, 5);
+console.log(numberPc);
 
 function generateRandomNumber(min, max) {
   const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
@@ -44,3 +47,11 @@ function isNumberEven(number) {
 }
 
 //Dichiarare vincitore
+
+function winnerVerified(userChoice, numVerified) {
+  return userChoice === numVerified;
+}
+
+//Vincitore console.log
+const isWinner = winnerVerified(userIsPari, numPariVerified);
+console.log(isWinner ? 'Hai vinto!' : 'Ha vinto il computer!');
