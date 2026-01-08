@@ -16,10 +16,17 @@ console.log(userChoiceParioDispari);
 
 //L'utente inserisce un numero da 1 a 5
 
-const userChoiceNumber = prompt('Inserisci un numero da 1 a 5').trim();
+const userChoiceNumber = parseInt(
+  prompt('Inserisci un numero da 1 a 5')
+).trim();
 console.log(userChoiceNumber);
 
 //Generiamo un numero random da 1 a 5 per il computer con una funzione
+
+function generateRandomNumber(min, max) {
+  const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+  return randomNumber;
+}
 
 // Sommiamo il numero inserito dall'utente ed il numero random
 
