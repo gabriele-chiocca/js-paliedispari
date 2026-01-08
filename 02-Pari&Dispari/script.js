@@ -36,4 +36,11 @@ const sumNumber = userChoiceNumber + numberPc;
 
 //Stabilire se la somma è pari o dispari
 
+const numPariVerified = isNumberEven(sumNumber);
+
+function isNumberEven(number) {
+  const isEven = number % 2 === 0;
+  return isEven;
+}
+
 //Dichiarare vincitore
